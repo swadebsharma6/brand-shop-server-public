@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "product": "iPhone",
+    "brand_image": "https://i.ibb.co/61qfHw3/apple.jpg"
+  },
+  {
+    "id": 2,
+    "brand": "Samsung",
+    "product": "Galaxy",
+    "brand_image": "https://i.ibb.co/yYTcDv6/samsung.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "Sony",
+    "product": "Xperia",
+    "brand_image": "https://i.ibb.co/1dhpVk4/sony.jpg"
+  },
+  {
+    "id": 4,
+    "brand": "Google",
+    "product": "Pixel",
+    "brand_image": "https://i.ibb.co/rtDdLwg/google.jpg"
+  },
+  {
+    "id": 5,
+    "brand": "Intel",
+    "product": "Processor",
+    "brand_image": "https://i.ibb.co/QfVJLR5/intel.jpg"
+  },
+  {
+    "id": 6,
+    "brand": "Canon",
+    "product": "Smartphone",
+    "brand_image": "https://i.ibb.co/CWzLS7n/canon.jpg"
+  }
+]

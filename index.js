@@ -10,11 +10,31 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-
+// categories
+const categories = require('./data/brands.json');
+const items = require('./data/items.json');
 
 app.get('/', (req, res) => {
   res.send('Brand shop server is Running!')
 })
+
+app.get('/categories', (req, res)=>{
+  res.send(categories);
+})
+
+
+app.get('/items', (req, res)=>{
+  res.send(items)
+})
+
+// specific one item
+app.get('/items/:id', (req, res)=>{
+    const id = req.params.id;
+    console.log(id);
+    const selected = items.find(n => n._id == id);
+    res.send(selected);
+})
+
 
 
 
@@ -36,6 +56,10 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+
+    
+
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
