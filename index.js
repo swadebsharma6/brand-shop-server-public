@@ -10,15 +10,15 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// categories
-const categories = require('./data/brands.json');
-const items = require('./data/items.json');
+// // categories
+// const brands = require('./data/brands.json');
+
 
 app.get('/', (req, res) => {
   res.send('Brand shop server is Running!')
 })
 
-const uri = `mongodb+srv://${process.env.DB_user}:${process.env.DB_password}@cluster0.fikwith.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.fikwith.mongodb.net/?retryWrites=true&w=majority`;
 
 // const uri = "mongodb+srv://<username>:<password>@cluster0.fikwith.mongodb.net/?retryWrites=true&w=majority";
 
@@ -38,6 +38,36 @@ async function run() {
 
     const productCollection = client.db('productDB').collection('products');
 
+    const brandsCollection = client.db('brandsBD').collection('brands');
+
+   
+     
+
+      app.get('/brands', async(req, res)=>{
+        const cursor = brandsCollection.find();
+        const result = await cursor.toArray();
+        console.log(result)
+        res.send(result);
+      })
+
+        // add a single data
+        app.post('/products', async(req, res)=>{
+          const newProduct = req.body;
+          console.log(newProduct);
+          const result = await productCollection.insertOne(newProduct);
+          res.send(result);
+        })
+
+        app.get('/products/:brand', async(req, res)=>{
+          const brand  = req.params.brand;
+          const filter = { brand: brand };
+          const options ={upsert: true}
+          const result = await productCollection.find(filter, options).toArray();
+          console.log(result)
+          res.send(result)
+      
+        })
+
     // send all data
     app.get('/products', async(req, res)=>{
       const cursor = productCollection.find();
@@ -45,7 +75,11 @@ async function run() {
       res.send(result);
     })
 
-    // 
+     
+    
+
+ 
+
     app.get('/products/:id', async(req, res)=>{
       const id = req.params.id;
       const query ={_id : new ObjectId(id)}
@@ -65,13 +99,7 @@ async function run() {
 
     
 
-    // add a single data
-    app.post('/products', async(req, res)=>{
-      const newProduct = req.body;
-      console.log(newProduct);
-      const result = await productCollection.insertOne(newProduct);
-      res.send(result);
-    })
+
 
 
     // Send a ping to confirm a successful connection
