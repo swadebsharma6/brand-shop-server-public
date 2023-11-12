@@ -10,9 +10,6 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// // categories
-// const brands = require('./data/brands.json');
-
 
 app.get('/', (req, res) => {
   res.send('Brand shop server is Running!')
@@ -50,18 +47,10 @@ async function run() {
         res.send(result);
       })
 
-        // add a single data
-        app.post('/products', async(req, res)=>{
-          const newProduct = req.body;
-          console.log(newProduct);
-          const result = await productCollection.insertOne(newProduct);
-          res.send(result);
-        })
-
         app.get('/products/:brand', async(req, res)=>{
           const brand  = req.params.brand;
           const filter = { brand: brand };
-          const options ={upsert: true}
+          const options ={upsert: true};
           const result = await productCollection.find(filter, options).toArray();
           console.log(result)
           res.send(result)
@@ -75,27 +64,32 @@ async function run() {
       res.send(result);
     })
 
-     
-    
-
- 
-
+    // get a special product 
     app.get('/products/:id', async(req, res)=>{
       const id = req.params.id;
-      const query ={_id : new ObjectId(id)}
+      const query ={_id : new ObjectId(id)};
       const result = await productCollection.findOne(query);
+      res.send(result)
+    })
+
+
+     // add a single data
+     app.post('/products', async(req, res)=>{
+      const newProduct = req.body;
+      console.log(newProduct);
+      const result = await productCollection.insertOne(newProduct);
       res.send(result);
     })
 
 
     // delete
-    app.delete('/products/:id', async(req, res)=>{
-      const id = req.params.id;
-      const query ={_id : new ObjectId(id)};
-      const result = await productCollection.deleteOne(query);
-      res.send(result);
+    // app.delete('/products/:id', async(req, res)=>{
+    //   const id = req.params.id;
+    //   const query ={_id : new ObjectId(id)};
+    //   const result = await productCollection.deleteOne(query);
+    //   res.send(result);
 
-    })
+    // })
 
     
 
