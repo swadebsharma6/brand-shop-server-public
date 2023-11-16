@@ -30,7 +30,9 @@ async function run() {
     await client.connect();
 
     const productCollection = client.db("productDB").collection("products");
+
     const cartCollection = client.db("productDB").collection("addedProducts");
+
     const brandsCollection = client.db("productBD").collection("brands");
 
     //  brand collection Api
@@ -53,7 +55,7 @@ async function run() {
       const  query ={_id : new ObjectId(id)};
       const options ={upsert: true};
       const result = await productCollection.findOne(query, options);
-      console.log("result inside server", result);
+      // console.log("result inside server", result);
       res.send(result);
     });
 
