@@ -29,20 +29,23 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
+    
+
     const productCollection = client.db("productDB").collection("products");
 
     const cartCollection = client.db("productDB").collection("addedProducts");
 
-    const brandsCollection = client.db("productBD").collection("brands");
-
+   
+    const brandCollection = client.db("productBD").collection("brands");
+    
     //  brand collection Api
     app.get("/brands", async (req, res) => {
-      const cursor = brandsCollection.find();
+      const cursor = brandCollection.find();
       const result = await cursor.toArray();
       res.send(result);
     });
 
-    // send all data
+    // send all product data
     app.get("/products", async (req, res) => {
       const cursor = productCollection.find();
       const result = await cursor.toArray();
