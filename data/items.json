@@ -1,6 +1,5 @@
 [
   {
-    "_id": 1001,
     "brand": "Apple",
     "id": 1,
     "name": "iPhone 13",
@@ -11,7 +10,6 @@
     "image": "iphone13_image.jpg"
   },
   {
-    "_id": 1002,
     "brand": "Apple",
     "id": 2,
     "name": "MacBook Air",
@@ -22,7 +20,6 @@
     "image": "macbookair_image.jpg"
   },
   {
-    "_id": 1003,
     "brand": "Apple",
     "id": 3,
     "name": "iPad Pro",
@@ -33,7 +30,6 @@
     "image": "ipadpro_image.jpg"
   },
   {
-    "_id": 1004,
     "brand": "Apple",
     "id": 4,
     "name": "Apple Watch Series 7",
@@ -44,7 +40,6 @@
     "image": "applewatch7_image.jpg"
   },
   {
-    "_id": 1005,
     "brand": "Samsung",
     "id": 5,
     "name": "Samsung Galaxy S21 Ultra",
@@ -55,7 +50,6 @@
     "image": "s21ultra_image.jpg"
   },
   {
-    "_id": 1006,
     "brand": "Samsung",
     "id": 6,
     "name": "Samsung 55-Inch QLED 4K TV",
@@ -66,7 +60,6 @@
     "image": "samsungtv_image.jpg"
   },
   {
-    "_id": 1007,
     "brand": "Samsung",
     "id": 7,
     "name": "Samsung Galaxy Tab S7",
@@ -77,7 +70,6 @@
     "image": "galaxytabs7_image.jpg"
   },
   {
-    "_id": 1008,
     "brand": "Samsung",
     "id": 8,
     "name": "Samsung Galaxy Watch 4",
@@ -88,7 +80,6 @@
     "image": "galaxywatch4_image.jpg"
   },
   {
-    "_id": 1009,
     "brand": "Sony",
     "id": 9,
     "name": "Sony PlayStation 5",
@@ -99,7 +90,6 @@
     "image": "ps5_image.jpg"
   },
   {
-    "_id": 1010,
     "brand": "Sony",
     "id": 10,
     "name": "Sony WH-1000XM4 Wireless Headphones",
@@ -110,7 +100,6 @@
     "image": "sonyheadphones_image.jpg"
   },
   {
-    "_id": 1011,
     "brand": "Sony",
     "id": 11,
     "name": "Sony Bravia 65-Inch OLED 4K TV",
@@ -121,7 +110,6 @@
     "image": "sonyoledtv_image.jpg"
   },
   {
-    "_id": 1012,
     "brand": "Sony",
     "id": 12,
     "name": "Sony Alpha 7 III Mirrorless Camera",
@@ -132,7 +120,6 @@
     "image": "sonyalphacamera_image.jpg"
   },
   {
-    "_id": 1013,
     "brand": "Google",
     "id": 13,
     "name": "Google Pixel 6 Pro",
@@ -143,7 +130,6 @@
     "image": "pixel6pro_image.jpg"
   },
   {
-    "_id": 1014,
     "brand": "Google",
     "id": 14,
     "name": "Google Nest Hub",
@@ -154,7 +140,6 @@
     "image": "nesthub_image.jpg"
   },
   {
-    "_id": 1015,
     "brand": "Google",
     "id": 15,
     "name": "Google Pixelbook Go",
@@ -165,7 +150,6 @@
     "image": "pixelbookgo_image.jpg"
   },
   {
-    "_id": 1016,
     "brand": "Google",
     "id": 16,
     "name": "Google Nest Cam Outdoor",
@@ -176,7 +160,6 @@
     "image": "nestcamoutdoor_image.jpg"
   },
   {
-    "_id": 1017,
     "brand": "Intel",
     "id": 17,
     "name": "Intel Core i9-11900K Processor",
@@ -187,7 +170,6 @@
     "image": "intelcpu_image.jpg"
   },
   {
-    "_id": 1018,
     "brand": "Intel",
     "id": 18,
     "name": "Intel 1TB 660p NVMe SSD",
@@ -198,7 +180,6 @@
     "image": "intelssd_image.jpg"
   },
   {
-    "_id": 1019,
     "brand": "Intel",
     "id": 19,
     "name": "Intel NUC Mini PC Kit",
@@ -209,7 +190,6 @@
     "image": "intelnuc_image.jpg"
   },
   {
-    "_id": 1020,
     "brand": "Intel",
     "id": 20,
     "name": "Intel Dual-Band Wi-Fi 6 Adapter",
@@ -220,7 +200,6 @@
     "image": "intelwifi6_image.jpg"
   },
   {
-    "_id": 1021,
     "brand": "Canon",
     "id": 21,
     "name": "Canon EOS 5D Mark IV",
@@ -231,7 +210,6 @@
     "image": "canoncamera_image.jpg"
   },
   {
-    "_id": 1022,
     "brand": "Canon",
     "id": 22,
     "name": "Canon PIXMA Pro-100 Printer",
@@ -242,7 +220,6 @@
     "image": "canonprinter_image.jpg"
   },
   {
-    "_id": 1023,
     "brand": "Canon",
     "id": 23,
     "name": "Canon PowerShot G7 X Mark III",
@@ -253,7 +230,6 @@
     "image": "canong7x_image.jpg"
   },
   {
-    "_id": 1024,
     "brand": "Canon",
     "id": 24,
     "name": "Canon Vixia HF G21 Camcorder",
