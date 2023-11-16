@@ -31,7 +31,7 @@ async function run() {
 
     const productCollection = client.db("productDB").collection("products");
     const cartCollection = client.db("productDB").collection("addedProducts");
-    const brandsCollection = client.db("brandsBD").collection("brands");
+    const brandsCollection = client.db("productBD").collection("brands");
 
     //  brand collection Api
     app.get("/brands", async (req, res) => {
